@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaRegistrosComponent implements OnInit {
 
+  listRegistrosMes: Array<any> = [
+    { dia: 1, concepto: "Seguros", descripcion: "Coche", cantidad: 315}
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
