@@ -1,8 +1,8 @@
 <td>{{registro.dia}}</td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{registro.concepto}}</td>
+<td>{{registro.descripcion}}</td>
+<td>{{registro.cantidad}}</td>
 <td>
-    <button>Editar</button>
-    <button>Borrar</button>
+    <button (click)="editRegister()" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
+    <button (click)="deleteRegister()" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
 </td>

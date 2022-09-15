@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { IRegistro } from '../../interfaces/i-registro';
+import { RegistrosService } from '../../services/registros.service';
 
 @Component({
-  selector: 'app-tabla-registros',
+  selector: 'tabla-registros',
   templateUrl: './tabla-registros.component.html',
   styleUrls: ['./tabla-registros.component.css']
 })
 export class TablaRegistrosComponent implements OnInit {
 
-  listRegistrosMes: Array<any> = [
-    { dia: 1, concepto: "Seguros", descripcion: "Coche", cantidad: 315}
-  ];
+  conceptos = [ "DIA", "CONCEPTO", "DESCRIPCIÓN", "€", "-"]
 
-  constructor() { }
+  listRegistrosMes: IRegistro[] = [];
+
+  constructor(public registrosService: RegistrosService) { }
 
   ngOnInit(): void {
+    this.listRegistrosMes = this.registrosService.getRegistrosMes();
   }
 
 }

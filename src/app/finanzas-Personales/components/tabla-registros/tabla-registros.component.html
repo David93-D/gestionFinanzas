@@ -1,16 +1,12 @@
 <table class="table text-center">
     <thead>
-        <tr style="color: #92BA92;">
-            <th>DIA</th>
-            <th>CONCEPTO</th>
-            <th>DESCRIPCIÓN</th>
-            <th>€</th>
-            <th>-</th>
+        <tr>
+            <th *ngFor="let concepto of conceptos">{{concepto}}</th>
         </tr>
     </thead>
     <tbody>
         <tr
-            app-list-registro
+            list-registro
             [registro]="registro"
             *ngFor="let registro of listRegistrosMes"
         >

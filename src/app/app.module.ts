@@ -7,6 +7,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TablaRegistrosComponent } from './finanzas-Personales/components/tabla-registros/tabla-registros.component';
 import { FinanzasPersonalesComponent } from './finanzas-Personales/components/finanzas-personales/finanzas-personales.component';
 import { ListRegistroComponent } from './finanzas-Personales/components/list-registro/list-registro.component';
+import { AnalisisMacroComponent } from './analisis-macro/components/analisis-macro/analisis-macro.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ListRegistroComponent } from './finanzas-Personales/components/list-reg
     NavbarComponent,
     TablaRegistrosComponent,
     FinanzasPersonalesComponent,
-    ListRegistroComponent
+    ListRegistroComponent,
+    AnalisisMacroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
